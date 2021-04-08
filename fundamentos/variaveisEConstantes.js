@@ -27,5 +27,5 @@ console.log(c)
  * 
  * - Por padrão vamos utilizar a seguinte ideia: tudo o que for imutável dentro do nosso
  * programa nós vamos declarar como 'const'. Caso a mudança do valor da variável seja
- * justificada, utilizamos o 'let' para que seja possível atribuir novos valores a ela.
+ * justificado, utilizamos o 'let' para que seja possível atribuir novos valores a ela.
  */
