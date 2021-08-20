@@ -24,6 +24,7 @@ const getTurma = (letra, callback) => {
 
 // Recurso do ES8
 // Objetivo de simplficiar o uso de promises...
+// Deixar um código assíncrono com aspecto de síncrono 
 let obterAlunos = async () => {
     const ta = await getTurma('A')
     const tb = await getTurma('B')

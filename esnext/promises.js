@@ -1,14 +1,15 @@
-/* - Utilizamos Promises quando queremos ter um processamento assíncrono
+/* - Utilizamos Promises (Promessas) quando queremos ter um processamento assíncrono.
  *  
  * - Ao final do processamento da Promise, em caso de sucesso, algo é retornado
  * e pode ser acessado através da palavra reservada 'then'. Em caso de erro, este
  * pode ser capturado e tratado utilizando a palavra reservada 'catch'.
  */
 
+// Se obtiver sucesso, chama 'resolve', caso contrário, chama 'reject'
 function falarDepoisDe(segundos, frase) {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
-            resolve(frase) // 'resolve' aceita um único parâmetro
+            resolve(frase) // 'resolve' e 'reject' aceitam um único parâmetro, se precisar passar mais, utilizar objeto ou array
         }, segundos * 1000)
     })
 }
