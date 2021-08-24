@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Modificando HTML #02</title>
+    <link rel='stylesheet' href='css/estilo.css'>
+    <script src='js/jquery.js'></script>
+</head>
+
+<body class='conteudo exercicio'>
+    <h1>Modificando HTML #02</h1>
+    <div id='div1'>1</div>
+    <div id='div2'>2</div>
+    <div id='div3'>3</div>
+    <p class='numero'>4</p>
+    <p class='numero'>5</p>
+
+    <script>
+        $('#div1').append(', 2') // Insere como FILHO e no FINAL do elemento selecionado
+        $('#div1').prepend('0, ') // Insere como FILHO e no COMEÇO do elemento selecionado
+
+        $('<span>, 3</span>').appendTo('#div1')
+        $('<span>-1, </span>').prependTo('#div1')
+
+        $('#div2').before('<p>Antes 2</p>') // Insere como IRMÃO e ANTES do elemento selecionado
+        $('#div2').after('<p>Depois 2</p>') // Insere como IRMÃO e DEPOIS do elemento selecionado
+
+        $('<p>Antes 3</p>').insertBefore('#div3')
+        $('<p>Depois 3</p>').insertAfter('#div3')
+
+        // $('p.numero').wrap('<div>')
+        $('p.numero').wrapAll('<div id="div4">')
+        $('#div4').empty() // Limpa o conteúdo de dentro do elemento selecionado
+        $('#div3, #div4').prev().remove() // Remove o elemento selecionado
+        
+        // $('body > p').replaceWith('<div>Substituto</div>') // Substitui os elementos selecionados pelo novo elemento
+        // $('<div>Substituto</div>').replaceAll('body > p')
+        $('body > p').replaceWith(function() {
+            return $('<div>').html($(this).html()).append('!!!')
+        })
+    </script>
+</body>
