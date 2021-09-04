@@ -93,11 +93,11 @@
         $('a[href="#link1"]').parents().css(comBorda).css(semBorda) // Pegar todos os ancestrais
         $('a[href="#link1"]').parentsUntil($('body')).css(comBorda).css(semBorda) // Pegar todos os ancestrais até...
 
-        $('main').children().css(comBorda).css(semBorda) // Filho direto
-        $('body').find('a').css(comBorda).css(semBorda) // Descendente
+        $('main').children().css(comBorda).css(semBorda) // Filhos diretos
+        $('body').find('a').css(comBorda).css(semBorda) // Descendentes
 
         const elementoDOM = document.getElementsByClassName('menu')
-        $(elementoDOM).css(comBorda) // Encapsula o elemento DOM
+        $(elementoDOM).css(comBorda) // Encapsulando o elemento da DOM
 
         $('main').children().each((i, e) => $(e).css(comBorda).css(semBorda)) // Os elementos de cada iteração em 'each' são os elementos puros da DOM
         $('li').each((i, e) => {
