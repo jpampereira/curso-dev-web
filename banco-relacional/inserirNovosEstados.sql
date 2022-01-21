@@ -1,0 +1,8 @@
+INSERT INTO ESTADOS (ID, NOME, SIGLA, REGIAO, POPULACAO)
+VALUES (1000, 'Novo', 'NV', 'Sul', 2.54);
+
+-- O ID desse novo estado inserido será 1001
+INSERT INTO ESTADOS (NOME, SIGLA, REGIAO, POPULACAO)
+VALUES ('Mais Novo', 'MN', 'Norte', 2.51);
+
+SELECT * FROM ESTADOS;

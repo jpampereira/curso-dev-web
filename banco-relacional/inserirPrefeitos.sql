@@ -1,0 +1,19 @@
+INSERT INTO PREFEITOS
+	(NOME, CIDADE_ID)
+VALUES
+	('Rodrigo Neves', 2),
+    ('Raquel Lyra', 3),
+    ('Zenaldo Coutinho', NULL);
+
+-- NULL PODE SER DUPLICADO NA TABELA
+INSERT INTO PREFEITOS
+	(NOME, CIDADE_ID)
+VALUES
+	('Rafael Greca', null);
+
+INSERT INTO PREFEITOS
+	(NOME, CIDADE_ID)
+VALUES
+	('Rodrigo Pinheiro', 3);
+    
+SELECT * FROM PREFEITOS;

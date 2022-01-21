@@ -1,0 +1,37 @@
+##### CHAVES PRIMÁRIAS #####
+
+- SURROGATE KEY = chave primária artificial (Não está associada a um atributo do objeto ao qual o registro se refere. 
+Ex.: 1, 2, 3, 4, ...
+
+- NATURAL KEY = chave primária criada a partir de um atributo que tem relação com o registro 
+Ex.: CPF, RG, CNPJ (São coisas que não podem ter valor duplicado).
+
+- Dê preferencia para o uso de SURROGATE KEYS, pois no caso de um cadastro errado de uma NATURAL KEY, pode dar uma dor de cabeça para concertar esse registro.
+
+- Você não pode apagar um registro se sua chave primária estiver presente como chave estrangeiro de um registro de outra tabela pois gera uma inconscistência que o banco não permite,
+pois os dados possuem uma relação.
+
+##### RELAÇÃO 1 PRA 1 #####
+
+- Relação bidireacional não funciona em bancos relacionais. 
+Ex: Em uma relação 1 pra 1, como cidade e prefeito (uma cidade tem apenas um prefeito e um prefeito governa uma única cidade).
+
+- Quando a relação for 1 pra 1, verificar a possibilidade de colocar os dados na mesma tabela. Para isso é necessário analisar os requisitos do sistema: se a nossa solução for explorar 
+poucas vezes essa relação, é viável colocar os dados em tabelas separadas. Porém, se essa relação for explorada com relevância, é melhor colocar os dados na mesma tabela, por questão 
+de desempenho das consultas.
+
+- Como definir na relacao 1 pra 1 em qual tabela vai a FK? Naquela em que aquele dado for mais relevante.
+
+##### BANCOS RELACIONAIS X NÃO RELACIONAIS #####
+
+- O problema que eu estou querendo resolver é melhor utilizando bancos relacionais ou não relacionais? e utilizar os dois e aproveitar as vantagens de cada um?
+
+##### LINGUAGEM DECLARATIVA X IMPERATIVA #####
+
+-Declarativa = SQL        = Quando você diz o que você quer e a linguagem realiza a operação abstraindo como aquilo foi feito.
+-Imperativa  = JavaScript = Quando você diz o que você quer mostrando como deve ser feito.
+
+##### OUTROS #####
+
+- CRUD = CREATE, READ, UPDATE, DELETE (Operações básicas).
+- Só colocar o tipo de um campo como númerico caso você vá realizar alguma operação em cima daquele valor (Ex.: você não soma CPFs, logo, não precisa armazená-lo como um tipo numérico);

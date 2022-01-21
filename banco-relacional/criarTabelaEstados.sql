@@ -1,0 +1,11 @@
+-- Criando a tabela estado!
+CREATE TABLE ESTADOS (
+	ID INT UNSIGNED NOT NULL AUTO_INCREMENT,
+    NOME VARCHAR(45) NOT NULL,
+    SIGLA VARCHAR(2) NOT NULL,
+    REGIAO ENUM('Norte', 'Nordeste', 'Centro-Oeste', 'Sudeste', 'Sul') NOT NULL,
+    POPULACAO DECIMAL(5,2),
+    PRIMARY KEY (ID),
+    UNIQUE KEY (NOME),
+    UNIQUE KEY (SIGLA)
+);
